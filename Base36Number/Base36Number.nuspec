@@ -7,7 +7,7 @@
     <authors>$author$</authors>
     <owners>$author$</owners>
     <license type="expression">MIT</license>
-    <!-- <projectUrl>https://github.com/kawaidainfinity/KWID.ExtensionLibrary</projectUrl> -->
+    <projectUrl>https://github.com/kawaidainfinity/KWID.Base36Number</projectUrl>
     <!-- <iconUrl></iconUrl> -->
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>

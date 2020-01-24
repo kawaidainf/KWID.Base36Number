@@ -1,5 +1,5 @@
 # 概要
-Nuget で公開している KWID.Base36Number のソースです。
+Nuget で公開している [KWID.Base36Number](https://www.nuget.org/packages/Base36Number/) のソースです。
 36進数を取り扱えます。
 
 # License
