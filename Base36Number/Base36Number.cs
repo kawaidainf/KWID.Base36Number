@@ -11,7 +11,10 @@ namespace KWID.Common
     /// </summary>
     public struct Base36Number
     {
-        private static readonly char[] Base36NumberChars = "0123456789ABCDEFGHIJKLMNOPQRSTRVWXYZ".ToCharArray();
+        /// <summary>
+        /// 36進数で使用されている数値と文字一覧
+        /// </summary>
+        public static readonly char[] Base36NumberChars = "0123456789ABCDEFGHIJKLMNOPQRSTRVWXYZ".ToCharArray();
 
         #region public static properties
 

@@ -13,7 +13,7 @@
     <description>$description$</description>
     <summary>$description$</summary>
     <releaseNotes>
-アセンブリ情報変更
+使用している文字一覧を public なフィールドに変更
 </releaseNotes>
     <copyright>$copyright$</copyright>
     <tags>extension extensions</tags>
