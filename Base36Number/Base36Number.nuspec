@@ -13,7 +13,7 @@
     <description>$description$</description>
     <summary>$description$</summary>
     <releaseNotes>
-使用している文字一覧を public なフィールドに変更
+使用している文字一覧の「U」が「R」になっている不具合を修正
 </releaseNotes>
     <copyright>$copyright$</copyright>
     <tags>extension extensions</tags>

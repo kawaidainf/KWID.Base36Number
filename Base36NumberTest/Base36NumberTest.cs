@@ -107,6 +107,10 @@ namespace KWID.Common.Test
             Assert.AreEqual(true, val);
             Assert.AreEqual(new Base36Number(long.MaxValue), result);
 
+            val = Base36Number.TryParse("001JK", out result);
+            Assert.AreEqual(true, val);
+            Assert.AreEqual(new Base36Number(2000), result);
+
             val = Base36Number.TryParse("frhua!##", out result);
             Assert.AreEqual(false, val);
             Assert.AreEqual(Base36Number.MinValue, result);
