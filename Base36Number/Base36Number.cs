@@ -98,7 +98,7 @@ namespace KWID.Common
         #region object override method and operator
 
         /// <summary>
-        /// この構造体と指定されたオブジェクトが同一かどうか。
+        /// この構造体と指定されたオブジェクトが同一かどうかを検証します。
         /// </summary>
         /// <param name="obj">比較対象オブジェクト</param>
         /// <returns>同一ならTrue</returns>
@@ -186,7 +186,7 @@ namespace KWID.Common
         #region public method
 
         /// <summary>
-        /// 加算する。
+        /// 加算します。
         /// </summary>
         /// <param name="val">加算したい値</param>
         /// <returns>加算された値</returns>
@@ -197,7 +197,7 @@ namespace KWID.Common
         }
 
         /// <summary>
-        /// 36進数の文字列に変換する。
+        /// 36進数の文字列に変換します。
         /// </summary>
         /// <returns>変換後の36進数文字列</returns>
         public override string ToString()
@@ -249,7 +249,7 @@ namespace KWID.Common
         #region static method
 
         /// <summary>
-        /// 文字列を36進数に変換する。
+        /// 文字列を36進数に変換します。
         /// </summary>
         /// <param name="base36Value">変換する36進数文字列</param>
         /// <returns>変換後の36進数オブジェクト</returns>
@@ -284,25 +284,33 @@ namespace KWID.Common
         }
 
         /// <summary>
-        /// 文字列が36進数オブジェクトに変換できるかどうか。
+        /// 文字列が36進数オブジェクトに変換できるかどうかを検証します。
         /// </summary>
         /// <param name="base36Value">変換する36進数文字列</param>
         /// <param name="result">変換後の36進数オブジェクト。失敗した場合はMinValueが返却される。</param>
         /// <returns>変換できればTrue</returns>
         public static bool TryParse(string base36Value, out Base36Number result)
         {
-            if (!IsBase36Number(base36Value))
+            try
+            {
+                if (!IsBase36Number(base36Value))
+                {
+                    result = MinValue;
+                    return false;
+                }
+
+                result = Parse(base36Value);
+                return true;
+            }
+            catch
             {
                 result = MinValue;
                 return false;
             }
-
-            result = Parse(base36Value);
-            return true;
         }
 
         /// <summary>
-        /// 文字列が36進数で使用される文字のみで構成されているかどうか。
+        /// 文字列が36進数で使用される文字のみで構成されているかどうかを検証します。
         /// </summary>
         /// <param name="base36Value">検査対象文字列</param>
         /// <returns>36進数で使用される文字のみで構成されていればTrue</returns>

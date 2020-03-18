@@ -111,9 +111,13 @@ namespace KWID.Common.Test
             Assert.AreEqual(true, val);
             Assert.AreEqual(new Base36Number(2000), result);
 
+
             val = Base36Number.TryParse("frhua!##", out result);
             Assert.AreEqual(false, val);
             Assert.AreEqual(Base36Number.MinValue, result);
+
+            val = Base36Number.TryParse("609DOLZQ7PSG9W15", out result);
+            Assert.AreEqual(false, val);
         }
     }
 }
